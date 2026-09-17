@@ -1,0 +1,30 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "canyon-skills",
+  "version": "0.1.0",
+  "description": "Working modes and working docs: skills that change how an AI assistant thinks through a problem, and carry work across sessions.",
+  "author": {
+    "name": "Canyon R",
+    "url": "https://github.com/CanyonRuss"
+  },
+  "homepage": "https://github.com/CanyonRuss/skills",
+  "repository": "https://github.com/CanyonRuss/skills",
+  "license": "MIT",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Canyon R's Skills",
+    "shortDescription": "Working modes that set how the assistant thinks for a session, and working docs that carry work across sessions.",
+    "longDescription": "Seven working modes (explorer, interrogator, evaluator, planner, implementer, troubleshooter, validator), each built on two named frames the model already knows, plus three working-docs skills (working-doc, handoff-doc, kickoff-prompt) for work that outlives one conversation. Modes are invoked by name and stay on until you switch.",
+    "developerName": "Canyon R",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use explorer-mode to open this problem up before we decide anything",
+      "Write a handoff-doc for this session"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "canyon-skills",
+  "owner": {
+    "name": "Canyon R",
+    "email": "canyon@canyonr.com"
+  },
+  "metadata": {
+    "description": "Working modes and working docs: skills that change how an AI assistant thinks through a problem, and carry work across sessions.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "working-modes",
+      "description": "Seven session stances for an AI assistant: explorer, interrogator, evaluator, planner, implementer, troubleshooter, validator. Each sets how the assistant works for the rest of the session; invoked by name.",
+      "source": "./",
+      "strict": false,
+      "version": "0.1.0",
+      "skills": [
+        "./skills/explorer-mode",
+        "./skills/interrogator-mode",
+        "./skills/evaluator-mode",
+        "./skills/planner-mode",
+        "./skills/implementer-mode",
+        "./skills/troubleshooter-mode",
+        "./skills/validator-mode"
+      ]
+    },
+    {
+      "name": "working-docs",
+      "description": "Session-continuity skills that capture state and carry work across sessions: handoff-doc, working-doc, kickoff-prompt.",
+      "source": "./",
+      "strict": false,
+      "version": "0.1.0",
+      "skills": [
+        "./skills/handoff-doc",
+        "./skills/working-doc",
+        "./skills/kickoff-prompt"
+      ]
+    }
+  ]
+}
