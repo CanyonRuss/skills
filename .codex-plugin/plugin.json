@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "canyon-skills",
+  "name": "canyonr-skills",
   "version": "0.1.0",
   "description": "Working modes and working docs: skills that change how an AI assistant thinks through a problem, and carry work across sessions.",
   "author": {

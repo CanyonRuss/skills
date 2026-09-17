@@ -88,8 +88,8 @@ Add the marketplace once, then install either or both families:
 
 ```
 /plugin marketplace add CanyonRuss/skills
-/plugin install working-modes@canyon-skills
-/plugin install working-docs@canyon-skills
+/plugin install working-modes@canyonr-skills
+/plugin install working-docs@canyonr-skills
 ```
 
 Plugin skills are namespaced, so you invoke them as `working-modes:explorer-mode`, `working-docs:handoff-doc`, and so on.
@@ -115,7 +115,7 @@ Every skill here is a single `SKILL.md`, so you upload the file directly. A zip 
 
 Every skill is a folder containing a `SKILL.md`, and `skills/` is laid out the way most agents read directly. Pick your tool:
 
-- **Codex:** add the repo as a marketplace, then install **canyon-skills** from the Plugins directory. Codex sees all ten skills as one plugin.
+- **Codex:** add the repo as a marketplace, then install **canyonr-skills** from the Plugins directory. Codex sees all ten skills as one plugin.
   ```bash
   codex plugin marketplace add CanyonRuss/skills
   ```
@@ -142,7 +142,7 @@ npx skills add CanyonRuss/skills --skill explorer-mode  # or just one
 
 ### Updating
 
-- **Claude Code plugin:** `/plugin update working-modes@canyon-skills` (and the same for `working-docs`).
+- **Claude Code plugin:** `/plugin update working-modes@canyonr-skills` (and the same for `working-docs`).
 - **skills CLI:** `npx skills update`
 - **Hermes:** `hermes skills update`
 - **Codex:** update from the Plugins directory.
