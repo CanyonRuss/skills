@@ -64,7 +64,9 @@ This allows you to reference a larger concept that already exists within the tra
 
 I have specifically chosen the frames for each skill based on their correlation and ability to support each other or guard against potential pitfalls of a specific anchor. They are used to both frame the behavior and set the assistant's understanding of success so that it doesn't continue to drive to a single answer.
 
-**troubleshooter-mode** was the first where I used these anchors to overcome the assistant's tendency to take any anomaly it finds in a system and declare it the **Root Cause**, until it finds the next one and the cycle continues. I wanted to empower the session while focusing it on real causes not just the first thing it finds. This makes it useful for troubleshooting both systems and processes. 
+**troubleshooter-mode** was the first where I used these anchors to overcome the assistant's tendency to take any anomaly it finds in a system and declare it the **Root Cause**, until it finds the next one and the cycle continues. I wanted to empower the session while focusing it on real causes not just the first thing it finds. This makes it useful for troubleshooting both systems and processes.
+
+**interrogator-mode** is based on Matt Pocock's popular [grill-me skill](https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me) but adapted into my format with the addition of the **Ladder of Inference** anchor and made less prescriptive on the format of the questions.
 
 ### Working and Handing off
 
