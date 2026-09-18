@@ -1,0 +1,28 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "notGrouped": "bottom",
+  "groupings": [
+    {
+      "title": "Working modes",
+      "description": "Seven session stances. Turn one on by name and it sets how the assistant works for the rest of the session.",
+      "skills": [
+        "explorer-mode",
+        "interrogator-mode",
+        "evaluator-mode",
+        "planner-mode",
+        "implementer-mode",
+        "troubleshooter-mode",
+        "validator-mode"
+      ]
+    },
+    {
+      "title": "Working docs",
+      "description": "Session-continuity skills that capture state and carry work across conversations.",
+      "skills": [
+        "working-doc",
+        "handoff-doc",
+        "kickoff-prompt"
+      ]
+    }
+  ]
+}
