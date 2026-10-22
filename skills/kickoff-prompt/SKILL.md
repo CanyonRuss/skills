@@ -22,7 +22,7 @@ Include what this next session actually needs, in the imperative. You have the m
 - **Ground truth at entry** — the commit it should be standing on, plus a one-line baseline and the command that checks it, framed as verify-before-work. A tripwire, not a status report; what's passing and why belongs in the handoff.
 - **What to read, in order** — documents, files, artifacts, and the commands that establish current state; where each lives, and any sections to pay particular attention to.
 - **What not to read, and why** — superseded specs, stale phase reports, anything carrying rulings later reversed. The next session can't tell which documents went stale, and will believe them.
-- **What to load first** — memory scopes and anything else the next session can't discover on its own.
+- **What to load first** — memory spaces and anything else the next session can't discover on its own.
 - **Environment gotchas** — what breaks a session in its first few commands. State them as conditions to check, not as a list of known instances — an enumerated list reads as complete and won't be.
 - **Critical constraints** — settled points or gotchas that would derail the session early, marked for what they are: binding, or a prior session's call the next one may reopen. The rest stay in the handoff.
 - **Handback protocol** — what to do on hitting a gap mid-work: surface it and stop, never resolve it silently inline.

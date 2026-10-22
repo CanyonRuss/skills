@@ -19,7 +19,7 @@ Include what this next session actually needs, in the imperative:
 - **Mission** — what the session is for.
 - **Deliverable** — what it should produce and where that goes, when there's a clear one.
 - **What to read, in order** — documents, files, artifacts, where each lives, and any sections to pay particular attention to.
-- **What to load first** — memory scopes and anything else the next session can't discover on its own.
+- **What to load first** — memory spaces and anything else the next session can't discover on its own.
 - **Critical constraints** — settled points or gotchas that would derail the session early, marked for what they are: binding, or a prior session's call the next one may reopen. The rest stay in the handoff.
 
 **End every prompt by telling the next session to read everything named, then state back what it understands the session to be for and raise any questions or gaps it sees — before doing any work.**

@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Working modes and working docs: skills that change how an AI assistant thinks through a problem, and carry work across sessions.",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "plugins": [
     {
@@ -14,7 +14,7 @@
       "description": "Seven session stances for an AI assistant: explorer, interrogator, evaluator, planner, implementer, troubleshooter, validator. Each sets how the assistant works for the rest of the session; invoked by name.",
       "source": "./",
       "strict": false,
-      "version": "0.1.0",
+      "version": "0.1.1",
       "skills": [
         "./skills/explorer-mode",
         "./skills/interrogator-mode",
@@ -30,7 +30,7 @@
       "description": "Session-continuity skills that capture state and carry work across sessions: handoff-doc, working-doc, kickoff-prompt.",
       "source": "./",
       "strict": false,
-      "version": "0.1.0",
+      "version": "0.1.1",
       "skills": [
         "./skills/handoff-doc",
         "./skills/working-doc",

@@ -1,11 +1,11 @@
 ---
 name: evaluator-mode
 description: >
-  Evaluator work-mode: take a direction you already have — one you've settled on, or a couple you're
-  weighing — and pressure-test it into something solid enough to commit to and plan on. Trace each
+  Evaluator work-mode: take a direction already in hand — one already settled on, or a couple being
+  weighed — and pressure-test it into something solid enough to commit to and plan on. Trace each
   one forward to what it entails and costs, weigh live alternatives against each other, and pin down
   the load-bearing pieces it rests on; stop short of breaking it into tasks. It refines a direction
-  you bring — it doesn't generate one. Apply only when explicitly requested by name 'evaluator-mode'.
+  it's handed — it doesn't generate one. Apply only when explicitly requested by name 'evaluator-mode'.
 ---
 
 # Evaluator Mode
@@ -24,7 +24,7 @@ Follow the direction past its immediate effects to what it forces downstream: wh
 
 ## Weigh live directions against each other
 
-Tracing can break a direction, or surface a real alternative — leaving you with more than one live direction to weigh. Don't defend the one you walked in with, and don't drop it for the newcomer out of novelty; build the strongest version of each before choosing between them. Then bring it to a decision: distinguish "we should probably do this" from "this is the commitment we're making," and lay out what each option commits to and gives up. When the conversation is circling rather than closing, say so.
+Tracing can break a direction, or surface a real alternative — leaving you with more than one live direction to weigh. Don't defend the one you walked in with, and don't drop it for the newcomer out of novelty; build the strongest version of each so the User can choose between them. Then bring it to the User's decision: distinguish "we should probably do this" from "this is the commitment we're making," and lay out what each option commits to and gives up. When the conversation is circling rather than closing, say so.
 
 ## Spike to find out
 

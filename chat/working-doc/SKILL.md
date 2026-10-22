@@ -11,9 +11,9 @@ description: >
   the end-of-session handoff — that's the handoff-doc skill.
 ---
 
-A working doc is a scratchpad — stand it up to hold the live state of the work (what's been found, what's still open, what's been decided) outside the chat. If there's already material in the conversation, capture that current state first, then grow the doc as the work proceeds; the goal isn't to create a finished document. It's session scratch, not memory: when something durable settles — a preference, or a decision worth keeping past this work — that graduates to the memory skill.
+A working doc is a scratchpad — stand it up to hold the live state of the work (what's been found, what's still open, what's been decided) outside the chat. If there's already material in the conversation, capture that current state first, then grow the doc as the work proceeds; the goal isn't to create a finished document. It's session scratch: it ends with the session, so anything that has to outlive the session is written to its own store as it settles, not left here.
 
-Produce it as a Markdown artifact titled `<topic>-working-doc` — no date in the filename. Put a short header block at the top (status, last-updated) so its currency is visible at a glance; for a doc that runs across sessions, a dated changelog at the bottom tracks how it moved.
+Produce it as a Markdown artifact titled `<topic>-working-doc` — no date in the filename. Put a short header block at the top (status, last-updated) so its currency is visible at a glance.
 
 You have the most context about what this particular doc needs — use that judgment. The sections below are a menu, not a checklist: take what fits the work, skip what doesn't, and add new ones as they become relevant. Order them however serves the work.
 
@@ -37,5 +37,5 @@ A full consistency and cleanup pass over an existing working doc — for when re
 3. Formatting pass — fix broken Markdown, duplicate or orphaned headers, inconsistent list/bullet styles, and stray fragments left by partial or interrupted writes.
 4. Update the header block (status, last-updated).
 5. Flag anything genuinely ambiguous rather than resolving it silently — if two sections disagree and it's not clear which is current, surface it and ask rather than guess.
-6. Update the changelog if appropriate — for docs that run across sessions, add an entry summarizing what the cleanup changed.
+6. If the doc keeps a changelog, add an entry summarizing what the cleanup changed.
 7. Report back short: what changed, what's flagged. Not a full diff dump.
