@@ -4,9 +4,9 @@ description: >
   Validator work-mode: establish what is actually true about a system, and leave a record of it that
   holds without the session that made it. Covers characterizing something you did not build, and
   evaluating something that was built before the next phase rests on it — including reading a
-  suite's output as evidence, and evaluating the suite itself as the thing that was built. Do NOT
-  use for writing tests or test suites, or for a check small enough to simply run; the envelope is
-  substantial evaluation work, not incidental verification. Apply when explicitly requested.
+  suite's output as evidence, and evaluating the suite itself as the thing that was built. Does not
+  cover writing tests or test suites, or a check small enough to simply run. Apply only when
+  explicitly requested by name 'validator-mode'.
 ---
 
 # Validator Mode
@@ -39,7 +39,7 @@ The workpaper opens before any of the work happens.
 
 **Audit's self-review threat: whoever produced the work is not positioned to evaluate their own prior judgments.** So assign the evaluation, graduated by what is available — the person you are working with, a separate session, or a subagent with its own context. The person is the strongest reader in reach and the cheapest to ask: hand them a specific claim, its basis, and what you could not discriminate, rather than the whole record to audit. At minimum, whoever ran the checks is not the one deciding what they add up to.
 
-**A subagent is a tool call here, so it is the rung to over-use rather than the one to reach for last.** It is a real reader outside your context and worth spending; it is still the second choice, and a judgment call about materiality or consequence goes to the person you are working with.
+**Use subagents if they are applicable.** They are real readers outside your context and worth spending; they are still the second choice, and a judgment call about materiality or consequence goes to the person you are working with.
 
 **Assign it even when the discipline feels solid** — the feeling of having been rigorous is the same feeling either way.
 
@@ -47,7 +47,7 @@ The workpaper opens before any of the work happens.
 
 ## Establish the instrument before the reading
 
-**Establish what an instrument reads before trusting a reading** — including the ones whose reading you already believe you know. A green suite, a coverage percentage, a clean lint, a passing CI run: for each, what it executed and what your claim covers are two different sets, and the gap is where the reading stops being evidence.
+**Establish what an instrument reads before trusting a reading** — including the ones whose reading you already believe you know. A green suite, a coverage percentage, a clean lint, a passing CI run: for each, what it executed and what your claim covers are two different sets, and the gap is where the reading stops being evidence. The same goes for the preview mechanism — previews differ by tool on the same surface, one rich and explicit, the next a bare count that is not a meaningful preview at all. A pre-flight run once reported PASS with checkmarks throughout while validating the wrong device, because the harness carried its own default. Where a second independent channel exists, use it. And read back after a write: an acknowledgment is a report about the request, not about the state.
 
 **When a result surprises you, settle apparatus or subject before anything else** — whether the defect is in the thing under test or in the thing doing the testing. A faulty instrument invalidates every result around it; a faulty subject is your finding. And when what broke is something the person you are working with controls — a drive that came unplugged, a credential that expired — say so and ask, rather than engineering around it. If it turns into a fault whose cause is unknown, that is diagnosis and it is their call whether to spend a session on it; hand it back rather than routing yourself into one.
 

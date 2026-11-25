@@ -13,9 +13,7 @@ description: >
 
 Write a handoff document that transfers the *state and intent* of the current work, not a transcript of the conversation. The reader is a fresh chat (or the user returning later) with no memory of this session. Include enough that the next session can pick up the thread from this handoff and the docs it references — and nothing it could reconstruct on its own.
 
-**Before writing:** check whether the current working directory is inside a git repo (`git rev-parse --is-inside-work-tree`). If it is, ask where to save the file before proceeding. If it isn't, write to the current directory.
-
-Write it as a Markdown file titled `<topic>-handoff-<YYYYMMDD>.md`. Anchor it with the date and, if the user gave one, the stated focus of the next session.
+Write it as a Markdown file titled `<topic>-handoff-<YYYYMMDD>.md`. If you're working inside a git repository, ask where to save it first. Anchor it with the date and, if the user gave one, the stated focus of the next session.
 
 You have the most context about what this particular handoff needs — use that judgment. Decide what to include based on what the next session will actually need, not on filling out sections.
 

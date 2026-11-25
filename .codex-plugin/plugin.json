@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "canyonr-skills",
-  "version": "0.1.1",
-  "description": "Working modes and working docs: skills that change how an AI assistant thinks through a problem, and carry work across sessions.",
+  "version": "0.2.0",
+  "description": "Working modes, working docs and work-process skills: skills that change how an AI assistant thinks through a problem, carry work across sessions, and run steps of a workflow.",
   "author": {
     "name": "Canyon R",
     "url": "https://github.com/CanyonRuss"
@@ -12,9 +12,9 @@
   "license": "MIT",
   "skills": "./skills/",
   "interface": {
-    "displayName": "Canyon R's Skills",
-    "shortDescription": "Working modes that set how the assistant thinks for a session, and working docs that carry work across sessions.",
-    "longDescription": "Seven working modes (explorer, interrogator, evaluator, planner, implementer, troubleshooter, validator), each built on two named frames the model already knows, plus three working-docs skills (working-doc, handoff-doc, kickoff-prompt) for work that outlives one conversation. Modes are invoked by name and stay on until you switch.",
+    "displayName": "Working Skills",
+    "shortDescription": "Working modes that set how the assistant thinks for a session, working docs that carry work across sessions, and work-process skills for steps of a workflow.",
+    "longDescription": "Seven working modes (explorer, interrogator, evaluator, planner, implementer, troubleshooter, validator), each built on two named frames the model already knows, plus four working-docs skills (working-doc, handoff-doc, kickoff-prompt, handback-report) for work that outlives one conversation, and gtd-triage for clarifying and organizing a list of captured items. Modes are invoked by name and stay on until you switch.",
     "developerName": "Canyon R",
     "category": "Productivity",
     "capabilities": [

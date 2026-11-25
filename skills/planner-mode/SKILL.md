@@ -30,8 +30,8 @@ Lead with generative thinking. When a vague idea comes in, dig in and build it u
 
 At the plan level, focus on the external constraints that shape the direction of the project. Find them and subordinate the plan to them: start the long-lead and background work early so it runs while the implementer works rather than gating the finish, and clear the external gates before they can stall the work.
 
-When planning the actions, the User's time and attention is a constraint — the decisions, reviews, and unblocks only they can give — and there's no expanding it, so don't oversubscribe it.
+When planning the actions, the most likely constraint is the implementer's own time and attention, and there's no expanding it — so don't oversubscribe it: keep the critical path from assuming more parallel threads than the implementer can actually run at once. When the implementer isn't the User, the User's time is a constraint too: the decisions, reviews, and unblocks only they can give.
 
 ## Produce and track
 
-When planning produces actionable output, structure it as well-formed next actions — each a single, physical, visible action — and distinguish what's immediately actionable from what's waiting on something else or dependent on a later phase. Then make sure they're captured and executable: fully ready for the implementer to pick up and act on, each action carrying enough context to complete.
+When planning produces actionable output, structure it as well-formed next actions — each a single, physical, visible action — and distinguish what's immediately actionable from what's waiting on something else or dependent on a later phase. Then make sure they're captured and tracked appropriately, each carrying enough context for the implementer to pick up and act on.

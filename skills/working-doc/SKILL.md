@@ -13,9 +13,7 @@ description: >
 
 A working doc is a scratchpad — stand it up to hold the live state of the work (what's been found, what's still open, what's been decided) outside the chat. If there's already material in the conversation, capture that current state first, then grow the doc as the work proceeds; the goal isn't to create a finished document. It's session scratch: it ends with the session, so anything that has to outlive the session is written to its own store as it settles, not left here.
 
-**Before writing:** check whether the current working directory is inside a git repo (`git rev-parse --is-inside-work-tree`). If it is, ask where to save the file before proceeding. If it isn't, write to the current directory.
-
-Write it as a Markdown file titled `<topic>-working-doc.md` — no date in the filename. Put a short header block at the top (status, last-updated) so its currency is visible at a glance.
+Write it as a Markdown file titled `<topic>-working-doc.md` — no date in the filename. If you're working inside a git repository, ask where to save it first. Put a short header block at the top (status, last-updated) so its currency is visible at a glance.
 
 You have the most context about what this particular doc needs — use that judgment. The sections below are a menu, not a checklist: take what fits the work, skip what doesn't, and add new ones as they become relevant. Order them however serves the work.
 
@@ -23,9 +21,9 @@ You have the most context about what this particular doc needs — use that judg
 - **Open questions** — what's unresolved. Track resolution in place — mark them Resolved / Unresolved / Deferred rather than deleting — so the doc shows what's closed and what's still live.
 - **Decisions & rationale** — what was decided and *why*. The decision survives in the output; the reasoning is what evaporates and gets re-litigated, so capture it.
 - **Findings** — what's been turned up: research, test results, observations.
-- **Code state** — which files, modules, or areas of the codebase are in scope. Update as the work shifts focus.
-- **Test status** — track as tests run: what's passing, failing, deliberately broken. Note changes as they happen so the picture stays current.
-- **Environment / setup** — non-obvious runtime requirements discovered during the work: env vars, required services, version constraints. Capture when found so they don't get lost mid-session.
+- **Code state** — which files, modules, or areas of the codebase are in scope.
+- **Test status** — what's passing, failing, or deliberately broken.
+- **Environment / setup** — non-obvious runtime requirements discovered during the work: env vars, required services, version constraints.
 - **References** — pointers to other docs, files, or artifacts this work produced or leans on.
 - **Next steps** — what to pick up next.
 

@@ -21,7 +21,15 @@
       "skills": [
         "working-doc",
         "handoff-doc",
-        "kickoff-prompt"
+        "kickoff-prompt",
+        "handback-report"
+      ]
+    },
+    {
+      "title": "Work process",
+      "description": "Skills that run one step of a workflow on the material you bring.",
+      "skills": [
+        "gtd-triage"
       ]
     }
   ]

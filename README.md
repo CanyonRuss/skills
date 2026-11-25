@@ -1,4 +1,4 @@
-# Canyon R's Skills
+# Canyon R's Working Skills
 
 ## What are skills?
 
@@ -10,10 +10,11 @@ These are for people who use AI chat or agents to *think, decide, and plan*, not
 
 - **Working modes** change *how the assistant behaves for the rest of a session*: how it interacts around a problem and what its frame is.
 - **Working docs** externalize the information so that it doesn't get lost to context drift or between sessions.
+- **Work process** skills run one step of a workflow on the material you bring.
 
 ## The skills
 
-Each name below links to the skill file, so you can read exactly what it tells the assistant before you install it. The links go to the coding-agent version; the chat version sits under the same name in `chat/`.
+Each name below links to the skill file, so you can read exactly what it tells the assistant before you install it.
 
 ### Working modes
 
@@ -41,6 +42,12 @@ For work that outlives one conversation.
 - **[`working-doc`](skills/working-doc/SKILL.md)**: A live scratchpad the assistant keeps current as you go: where things stand, what's decided *and why*, what's still open, what you've found. Includes a cleanup pass for when it drifts.
 - **[`handoff-doc`](skills/handoff-doc/SKILL.md)**: At the end of a session, a document that transfers *state and intent* (decisions, rationale, next actions, gotchas) so a fresh session (or you, next week) resumes without re-deriving it all.
 - **[`kickoff-prompt`](skills/kickoff-prompt/SKILL.md)**: The short prompt you paste into the next session. Points at the docs, sets the mission and constraints, and tells the assistant to read everything and state back what it understands before doing any work. Companion to `handoff-doc`.
+- **[`handback-report`](skills/handback-report/SKILL.md)**: The status a session sends back to the session that sent it the work: where the work stands, what came of it, what was verified and what's passed on unchecked, and what's still open. Companion to `kickoff-prompt`: one sends work out, the other reports on it.
+
+### Work process
+
+- **[`gtd-triage`](skills/gtd-triage/SKILL.md)**: Takes a list of captured items (inbox items, open lines, notes, brainstormed tasks) through GTD's Clarify and Organize: works out what each one is, proposes where it goes based on the evidence, and acts on what you decide, ten items at a time.
+  - *Frames: [GTD Clarify and Organize](https://en.wikipedia.org/wiki/Getting_Things_Done)*
 
 ## Why these skills
 
@@ -76,25 +83,26 @@ The second issue was continuing work from one session to the next. I was inspire
 
 This then led to the **kickoff-prompt** skill which facilitates one session to create the prompt to start the next one. This way the handoff-doc can carry the majority of the context forward while the kickoff-prompt gives the new session its direction and pointers to all the relevant information and docs. While not strictly a "doc" skill I think it fits into the overall flow of the other skills so I'm including it with them in **Working docs**.
 
-### Why two copies of each skill
-
-These skills are useful for any LLM interface but the chat or Cowork surface offers different functions and tools than a coding-capable harness. Therefore each skill has a version tuned for those capabilities. The seven working modes are nearly identical across the two; the three docs skills differ more, because the coding-agent versions add sections about repository state, test status, and environment that don't apply in chat. `troubleshooter-mode` is the same file in both.
-
 ## Install
 
-Install as a plugin if you want updates automatically; copy the files if you want to edit them. Each skill has two versions: one for coding agents (`skills/`) and one for chat (`chat/`). Same name either way; pick by where you're running it.
+Install as a plugin if you want to pull in updates as they're released; copy the files if you want to edit them.
 
 ### Claude Code
 
-Add the marketplace once, then install either or both families:
+All twelve skills install as one plugin:
+
+```
+/plugin install working-skills --marketplace CanyonRuss/skills
+```
+
+On Claude Code versions before 2.1.275, add the marketplace first:
 
 ```
 /plugin marketplace add CanyonRuss/skills
-/plugin install working-modes@canyonr-skills
-/plugin install working-docs@canyonr-skills
+/plugin install working-skills@canyonr-skills
 ```
 
-Plugin skills are namespaced, so you invoke them as `working-modes:explorer-mode`, `working-docs:handoff-doc`, and so on.
+Plugin skills are namespaced, so you invoke them as `working-skills:explorer-mode`, `working-skills:handoff-doc`, and so on.
 
 To run from a local clone without the marketplace:
 
@@ -103,21 +111,17 @@ git clone https://github.com/CanyonRuss/skills.git
 claude --plugin-dir ./skills
 ```
 
-### claude.ai (chat)
+### claude.ai and Cowork
 
-claude.ai has no plugin marketplace, so skills are uploaded by hand. Cowork uses the same skills as your claude.ai account, so one upload covers both.
+**As a plugin** (paid plans), for chat and Cowork: open **Customize → Plugins → Add → Add marketplace → Add from a repository**, enter `CanyonRuss/skills`, then add **Working Skills**. It's saved to your account and also loads in Claude Code when you're signed in with the same account, so there's no need to install it there too.
 
-1. Download the skill's `SKILL.md` from **`chat/<skill-name>/`** in this repo.
-2. In claude.ai, open **Settings → Customize → Skills**, click **Add**, choose **Upload skill**, and select the file.
-3. Enable it. Repeat for each skill you want.
-
-Every skill here is a single `SKILL.md`, so you upload the file directly. A zip is only needed for skills that bundle extra files. There's no auto-update in chat; to update a skill, upload the file again. Anthropic's [Using skills in Claude](https://support.claude.com/en/articles/12512180-using-skills-in-claude) has the current UI.
+**One skill at a time** (any plan): download `SKILL.md` from **`skills/<skill-name>/`**, then open **Customize → Skills → + → Create skill → Upload a skill**. If it asks for a zip, zip the folder. [Use skills in Claude](https://support.claude.com/en/articles/12512180-use-skills-in-claude) has the current steps.
 
 ### Other coding agents
 
 Every skill is a folder containing a `SKILL.md`, and `skills/` is laid out the way most agents read directly. Pick your tool:
 
-- **Codex:** add the repo as a marketplace, then install **canyonr-skills** from the Plugins directory. Codex sees all ten skills as one plugin.
+- **Codex:** add the repo as a marketplace, then install **Working Skills** (`canyonr-skills`) from the Plugins directory. Codex sees all twelve skills as one plugin.
   ```bash
   codex plugin marketplace add CanyonRuss/skills
   ```
@@ -144,11 +148,12 @@ npx skills add CanyonRuss/skills --skill explorer-mode  # or just one
 
 ### Updating
 
-- **Claude Code plugin:** `/plugin update working-modes@canyonr-skills` (and the same for `working-docs`).
+- **Claude Code plugin:** `/plugin marketplace update canyonr-skills`, then `/plugin update working-skills@canyonr-skills`. Or turn on auto-update for the marketplace under `/plugin` → **Marketplaces**.
 - **skills CLI:** `npx skills update`
 - **Hermes:** `hermes skills update`
 - **Codex:** update from the Plugins directory.
-- **claude.ai:** upload the skill's `SKILL.md` again; there's no auto-update in chat.
+- **claude.ai and Cowork plugin:** select **Check for updates** on the marketplace, or turn on **Sync automatically**.
+- **claude.ai, uploaded skills:** upload the skill again; uploads don't update themselves.
 - **Gemini CLI, or copied by hand:** install or copy the folder again.
 
 ## Contributing

@@ -1,0 +1,22 @@
+{
+  "name": "working-skills",
+  "displayName": "Working Skills",
+  "version": "0.2.0",
+  "description": "Working modes, working docs and work-process skills: skills that change how an AI assistant thinks through a problem, carry work across sessions, and run steps of a workflow.",
+  "author": {
+    "name": "Canyon R",
+    "url": "https://github.com/CanyonRuss"
+  },
+  "homepage": "https://github.com/CanyonRuss/skills",
+  "repository": "https://github.com/CanyonRuss/skills",
+  "license": "MIT",
+  "icon": "./.claude-plugin/icon.png",
+  "keywords": [
+    "skills",
+    "working-modes",
+    "working-docs",
+    "gtd",
+    "handoff",
+    "planning"
+  ]
+}
